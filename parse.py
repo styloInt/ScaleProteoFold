@@ -8,13 +8,17 @@ import sys
 
 d=dict()
 
-def creatDataDict():
+def creatDataDict(isAdn=True):
 	d=dict()
 	with open('data.csv') as f:
 		for l in f:
 			parts=str.strip(l).split(",");
+			if isAdn:
+				parts[0] = parts[0].replace("U", "T")
 			d[parts[0]]=parts[1]
 	return d
+
+
 def ARN_TO_PRIMARY(file):
 
 		d =creatDataDict()
@@ -27,7 +31,7 @@ def ARN_TO_PRIMARY(file):
 				a=l[i]+l[i+1]+l[i+2]
 				if(a in d):
 					if(d[a]!='STOP'):
-						res[j].append(d[a]);
+						res[j].append(d[a])
 					else :
 						j+=1
 						if(i+3<len(l)-2):
