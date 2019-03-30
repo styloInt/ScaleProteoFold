@@ -1,6 +1,8 @@
-UUC,Leu
-UUA,Leu
-UUG,Leu
+AUG,Met
+GUG,Met
+UUC,Met
+UUA,Met
+UUG,Met
 CUU,Leu
 AUU,Ile
 GUU,Val
@@ -29,3 +31,5 @@ CCG,Pro
 ACU,Thr
 ACC,Thr
 UAG,STOP
+UAA,STOP
+UGA,STOP
