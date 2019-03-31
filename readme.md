@@ -1,10 +1,12 @@
-# Predict proteins 3D structures generated from a bacteria coding sequence
+# Predict proteins 3D structures generated from a bacteria coding DNA sequence
 This project was done as part of School of AI health hackathon. 
 It's heavly based on Eric Alcaid https://github.com/EricAlcaide/MiniFold/ work's.
 
 ## Summary
 
+## Pipeline
 
+[<img src="https://github.com/styloInt/ScaleProteoFold/blob/master/imgs/Pipeline.PNG">]
 
 ## Running on your computer
 
