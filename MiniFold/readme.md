@@ -1,4 +1,7 @@
 # MiniFold
+__Author: EricAlcaide__
+__https://github.com/EricAlcaide/MiniFold__
+
 ## Summary
 
 TL;DR: [DeepMind](https://deepmind.com) a company affiliated with Google and specialized in AI presented a novel algorithm for Protein Structure Prediction at [CASP13](http://predictioncenter.org/casp13/index.cgi) (a competition which goal is to find the best algorithms that predict protein structures in different categories).
