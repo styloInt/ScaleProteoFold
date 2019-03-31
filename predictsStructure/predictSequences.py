@@ -171,4 +171,4 @@ if __name__ == '__main__':
         print("Non file given")
 
     
-    print ("Angle predictions : {}".format(angle_predictions))
+    # print ("Angle predictions : {}".format(angle_predictions))
