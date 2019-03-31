@@ -5,14 +5,17 @@ import sys
 
 
 d=dict()
+isAdn = True
 
-def ConvertToProt(isAdn=False):
+def convertRmnaToDna(seq):
+	seq = seq.replace("T", "U")
+	return seq
+
+def ConvertToProt():
 	d=dict()
 	with open('data.csv') as f:
 		for l in f:
 			parts=str.strip(l).split(",");
-			if isAdn:
-				parts[0] = parts[0].replace("U", "T")
 			d[parts[0]]=parts[1]
 	return d
 
@@ -20,7 +23,7 @@ def convertToAA(d):
 	d1=dict()
 	with open('ProtToA.csv') as f:
 		for l in f:
-			parts=str.strip(l).split(",");
+			parts=str.strip(l).split(",")
 			d1[parts[0]]=parts[1]
 	
 	res=dict()
@@ -33,21 +36,23 @@ def ARN_TO_PRIMARY(file):
 		d0=ConvertToProt()
 		d=convertToAA(d0) 
 		with open(file) as f:
-			l =str.strip(f.read())
+			l = str.strip(f.read())
+			if isAdn:
+				l = convertRmnaToDna(l)
 			res=[]
 			i=0
-			a=l[0]+l[1]+l[2]
+			a=l[:3]
 			if(d[a]!='M'):
 				print("ERR : entrée")
-				return 
+				return ""
 			else :
 				while i< len(l)-2:
-					a=l[i]+l[i+1]+l[i+2]
+					a=l[i:i+2]
 					if(a in d):
 						if(d[a]!='_'):
 							res.append(d[a])
 						else :
-							break;
+							break
 					else :
 						print("ERR")
 					i+=3
