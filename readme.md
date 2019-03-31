@@ -2,11 +2,19 @@
 This project was done as part of School of AI health hackathon. 
 It's heavly based on Eric Alcaid https://github.com/EricAlcaide/MiniFold/ work's.
 
-## Summary
+## Context
+
+Generation of 3D proteins structures of gut bacterias
+
+By using Mini Alphafold library based on deep neural network, we want to predict new 3D configurations of proteins from primary structures of amino acids. In biology, protein function depends on its size and its tertiary structure, which defines the biological activity and.
+The process will be conduct on intestinal microbiotia, which constitutes a interesting field of investigation, given its relative newness and the large number of proteins involved.
+
 
 ## Pipeline
 
-[<img src="https://github.com/styloInt/ScaleProteoFold/blob/master/imgs/Pipeline.PNG">]
+Input your a bacteria coding DNA sequence to generate 3D structure of proteins
+<img src="https://github.com/styloInt/ScaleProteoFold/blob/master/imgs/Pipeline.PNG">
+
 
 ## Running on your computer
 
