@@ -39,23 +39,27 @@ def ARN_TO_PRIMARY(file):
 			l = str.strip(f.read())
 			if isAdn:
 				l = convertRmnaToDna(l)
-			res=[]
+			res=[[]]
 			i=0
 			a=l[:3]
-			if(d[a]!='M'):
-				print("ERR : entrée")
-				return ""
-			else :
-				while i< len(l)-2:
-					a=l[i:i+2]
-					if(a in d):
-						if(d[a]!='_'):
-							res.append(d[a])
-						else :
-							break
-					else :
-						print("ERR")
+			j=0
+			while(i<len(l)-2):
+				while(a in d and d[a]!='M'):
 					i+=3
+					a=l[i:i+3]
+				while i< len(l)-2 and a in d and  d[a]!='_':
+					res[j].append(d[a])
+					a=l[i:i+3]
+					i+=3
+				if(a not in d):
+					print("ERR: séquence non connu :",a)
+					return ""
+				else :
+					if(i>len(l)-2):
+						res.append([])
+						j+=1
+
+					
 			return res	
 
 
@@ -63,6 +67,9 @@ if __name__ == '__main__':
 
 	# pass the name of the file you want ti convert to primary
 		if(len(sys.argv)>1):
-			print("".join(ARN_TO_PRIMARY(sys.argv[1])))
+
+			l=ARN_TO_PRIMARY(sys.argv[1])
+			for l1 in l :
+				print("".join(l1))
 		else :
 			print("Non file given")
