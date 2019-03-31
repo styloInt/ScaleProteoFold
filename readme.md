@@ -9,6 +9,10 @@ Generation of 3D proteins structures of gut bacterias
 By using Mini Alphafold library based on deep neural network, we want to predict new 3D configurations of proteins from primary structures of amino acids. In biology, protein function depends on its size and its tertiary structure, which defines the biological activity and.
 The process will be conduct on intestinal microbiotia, which constitutes a interesting field of investigation, given its relative newness and the large number of proteins involved.
 
+## Solving the problem
+
+Protein folding is the biological process where the amino-acid primary sequence is transformed into a native 3-dimensional structure, that determines its biological activity. However, to model those configurations in research domain, it implies and complex process witch are done actually with NMR and radio cannot be done using traditional tools. Indeed, using artificial intelligence and deep learning, the objective is to understand the relation between the 3-dimensional structure of a protein and the amino acid primary sequence.
+
 
 ## Pipeline
 
