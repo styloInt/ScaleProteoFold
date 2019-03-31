@@ -1,5 +1,5 @@
 # MiniFold
-__Author: EricAlcaide__
+__Author: EricAlcaide__  
 __https://github.com/EricAlcaide/MiniFold__
 
 ## Summary
