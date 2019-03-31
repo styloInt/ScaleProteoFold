@@ -30,6 +30,8 @@ def computePSSM(seq):
     """
         Compute PSSM from primary sequence
         certainly an error
+
+        it certainly false
     """
     
     if len(seq) == 0:
